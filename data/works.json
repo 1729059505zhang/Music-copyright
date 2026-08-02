@@ -1,0 +1,134 @@
+[
+  {
+    "id": 1,
+    "title": "红尘客栈",
+    "type": "lyrics",
+    "authorId": 1,
+    "authorName": "词圣·李白",
+    "authorAvatar": "🎭",
+    "price": 2800,
+    "category": "古风",
+    "tags": [
+      "古风",
+      "江湖",
+      "抒情"
+    ],
+    "content": "天涯的尽头是风沙\n红尘的故事叫牵挂\n封刀隐没在寻常人家 东篱下\n闲云野鹤古刹\n\n快马在江湖里厮杀\n无非是名和利放不下\n心中有江山的人岂能快意潇洒\n我只求与你共华发",
+    "description": "一首充满江湖气息的古风歌词，讲述归隐山林的侠骨柔情。",
+    "plays": 3420,
+    "likes": 128,
+    "status": "onsale",
+    "createdAt": 1781818103543
+  },
+  {
+    "id": 2,
+    "title": "夜曲旋律",
+    "type": "melody",
+    "authorId": 2,
+    "authorName": "曲神·莫扎特",
+    "authorAvatar": "🎹",
+    "price": 5600,
+    "category": "流行",
+    "tags": [
+      "流行",
+      "夜晚",
+      "浪漫"
+    ],
+    "melodyNotes": "C4-E4-G4-C5-B4-G4-E4-C4\nD4-F4-A4-D5-C5-A4-F4-D4\nE4-G4-B4-E5-D5-B4-G4-E4",
+    "bpm": 76,
+    "key": "C大调",
+    "description": "优美动听的流行钢琴曲，适合夜晚独自聆听。",
+    "plays": 5680,
+    "likes": 256,
+    "status": "onsale",
+    "createdAt": 1783114103543
+  },
+  {
+    "id": 3,
+    "title": "春日花语",
+    "type": "lyrics",
+    "authorId": 1,
+    "authorName": "词圣·李白",
+    "authorAvatar": "🎭",
+    "price": 1800,
+    "category": "流行",
+    "tags": [
+      "春天",
+      "爱情",
+      "清新"
+    ],
+    "content": "春风拂过窗台\n花开花落又一载\n你的笑容如暖阳\n照进我心海\n\n樱花瓣飘下来\n落在你发梢裙摆\n牵着手走过那条小巷\n是我们最美的时光",
+    "description": "清新甜美的春日情歌，描绘初恋般的美好。",
+    "plays": 2100,
+    "likes": 89,
+    "status": "onsale",
+    "createdAt": 1783978103543
+  },
+  {
+    "id": 4,
+    "title": "命运交响曲",
+    "type": "melody",
+    "authorId": 2,
+    "authorName": "曲神·莫扎特",
+    "authorAvatar": "🎹",
+    "price": 8800,
+    "category": "古典",
+    "tags": [
+      "古典",
+      "交响",
+      "史诗"
+    ],
+    "melodyNotes": "G4-G4-G4-Eb4-F4-F4-F4-D4\nE4-E4-E4-C4-D4-D4-D4-Bb3",
+    "bpm": 120,
+    "key": "C小调",
+    "description": "气势磅礴的古典交响旋律，充满力量与希望。",
+    "plays": 8900,
+    "likes": 512,
+    "status": "onsale",
+    "createdAt": 1780522103543
+  },
+  {
+    "id": 5,
+    "title": "都市夜归人",
+    "type": "lyrics",
+    "authorId": 1,
+    "authorName": "词圣·李白",
+    "authorAvatar": "🎭",
+    "price": 2200,
+    "category": "摇滚",
+    "tags": [
+      "都市",
+      "孤独",
+      "奋斗"
+    ],
+    "content": "霓虹灯下的城市\n每个人都在赶路\n皮鞋踏碎了梦想\n却换不回当初的模样\n\n末班地铁的车窗\n映出疲惫的脸庞\n家的方向在远方\n那里有温暖的灯光",
+    "description": "都市打工族的心声，讲述奋斗路上的孤独与坚持。",
+    "plays": 1560,
+    "likes": 67,
+    "status": "onsale",
+    "createdAt": 1784410103543
+  },
+  {
+    "id": 6,
+    "title": "月光奏鸣曲",
+    "type": "melody",
+    "authorId": 2,
+    "authorName": "曲神·莫扎特",
+    "authorAvatar": "🎹",
+    "price": 6800,
+    "category": "古典",
+    "tags": [
+      "古典",
+      "钢琴",
+      "月光"
+    ],
+    "melodyNotes": "C#5-B4-A4-G#4-F#4-E4-D#4-C#4\nB4-A4-G#4-F#4-E4-D#4-C#4-B3",
+    "bpm": 66,
+    "key": "C#小调",
+    "description": "如月光般温柔流淌的钢琴旋律，静谧而深邃。",
+    "plays": 6780,
+    "likes": 389,
+    "status": "onsale",
+    "createdAt": 1781386103543
+  }
+]

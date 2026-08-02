@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MuseHub · 作词作曲交易平台</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- 导航栏 -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo" onclick="router.navigate('home')">
+        <span class="logo-icon">𝄞</span>
+        <span class="logo-text">Muse<span class="logo-accent">Hub</span></span>
+      </div>
+      <div class="nav-links">
+        <a class="nav-link active" data-route="home" onclick="router.navigate('home')">首页</a>
+        <a class="nav-link" data-route="market" onclick="router.navigate('market')">作品市场</a>
+        <a class="nav-link" data-route="publish" onclick="router.requireAuth('publish')">发布作品</a>
+        <a class="nav-link" data-route="dashboard" onclick="router.requireAuth('dashboard')">创作中心</a>
+      </div>
+      <div class="nav-user" id="navUser">
+        <button class="btn btn-ghost" onclick="showModal('login')">登录</button>
+        <button class="btn btn-primary" onclick="showModal('register')">注册</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 主内容区 -->
+  <main id="app"></main>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="logo">
+          <span class="logo-icon">𝄞</span>
+          <span class="logo-text">Muse<span class="logo-accent">Hub</span></span>
+        </div>
+        <p class="footer-slogan">让每一个音符，找到它的知音</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>平台</h4>
+          <a>关于我们</a>
+          <a>服务条款</a>
+          <a>隐私政策</a>
+        </div>
+        <div class="footer-col">
+          <h4>创作者</h4>
+          <a>入驻指南</a>
+          <a>版权说明</a>
+          <a>收益规则</a>
+        </div>
+        <div class="footer-col">
+          <h4>帮助</h4>
+          <a>常见问题</a>
+          <a>联系客服</a>
+          <a>意见反馈</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 MuseHub · 版权所有</span>
+      <span>用心守护每一份创作</span>
+    </div>
+  </footer>
+
+  <!-- 登录弹窗 -->
+  <div class="modal" id="loginModal">
+    <div class="modal-mask" onclick="closeModal('login')"></div>
+    <div class="modal-card modal-small">
+      <div class="modal-header">
+        <h3>欢迎回来</h3>
+        <button class="modal-close" onclick="closeModal('login')">×</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label>用户名</label>
+          <input type="text" id="loginUsername" placeholder="请输入用户名">
+        </div>
+        <div class="form-group">
+          <label>密码</label>
+          <input type="password" id="loginPassword" placeholder="请输入密码">
+        </div>
+        <button class="btn btn-primary btn-block" onclick="handleLogin()">登录</button>
+        <div class="form-divider">
+          <span>还没有账号？</span>
+        </div>
+        <button class="btn btn-outline btn-block" onclick="closeModal('login');showModal('register')">立即注册</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 注册弹窗 -->
+  <div class="modal" id="registerModal">
+    <div class="modal-mask" onclick="closeModal('register')"></div>
+    <div class="modal-card modal-small">
+      <div class="modal-header">
+        <h3>加入创作者社区</h3>
+        <button class="modal-close" onclick="closeModal('register')">×</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label>用户名</label>
+          <input type="text" id="regUsername" placeholder="请输入用户名">
+        </div>
+        <div class="form-group">
+          <label>昵称</label>
+          <input type="text" id="regNickname" placeholder="展示给他人的名字">
+        </div>
+        <div class="form-group">
+          <label>邮箱</label>
+          <input type="email" id="regEmail" placeholder="可选">
+        </div>
+        <div class="form-group">
+          <label>密码</label>
+          <input type="password" id="regPassword" placeholder="至少6位">
+        </div>
+        <div class="form-group">
+          <label>身份</label>
+          <div class="role-selector">
+            <label class="role-option active">
+              <input type="radio" name="role" value="buyer" checked>
+              <div class="role-card">
+                <span class="role-icon">🎧</span>
+                <span class="role-name">音乐爱好者</span>
+                <span class="role-desc">欣赏、购买优秀作品</span>
+              </div>
+            </label>
+            <label class="role-option">
+              <input type="radio" name="role" value="seller">
+              <div class="role-card">
+                <span class="role-icon">✍️</span>
+                <span class="role-name">创作者</span>
+                <span class="role-desc">发布作品赚取收益</span>
+              </div>
+            </label>
+          </div>
+        </div>
+        <button class="btn btn-primary btn-block" onclick="handleRegister()">创建账号</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 作品详情弹窗 -->
+  <div class="modal" id="workModal">
+    <div class="modal-mask" onclick="closeModal('work')"></div>
+    <div class="modal-card modal-large">
+      <div class="modal-header">
+        <h3 id="workTitle">作品详情</h3>
+        <button class="modal-close" onclick="closeModal('work')">×</button>
+      </div>
+      <div class="modal-body" id="workBody"></div>
+    </div>
+  </div>
+
+  <!-- Toast提示 -->
+  <div id="toast" class="toast"></div>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>

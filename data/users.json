@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "username": "lyric_master",
+    "nickname": "词圣·李白",
+    "password": "$2a$08$LViIj2KtQxyv9TLKNrkLxezCoCK3FpHWkY4uS.ZTJh.fCWvEvk1f2",
+    "email": "libai@example.com",
+    "role": "seller",
+    "avatar": "🎭",
+    "balance": 5200,
+    "bio": "专业作词人20年，擅长古风、流行",
+    "createdAt": 1759786103500
+  },
+  {
+    "id": 2,
+    "username": "melody_king",
+    "nickname": "曲神·莫扎特",
+    "password": "$2a$08$/TI.qG.Tm08129rnDQQoT.Tprx0cNk2ufk8bDQn5cwO5Mp1iyfXZm",
+    "email": "mozart@example.com",
+    "role": "seller",
+    "avatar": "🎹",
+    "balance": 8800,
+    "bio": "音乐世家出身，精通多种乐器",
+    "createdAt": 1768426103521
+  },
+  {
+    "id": 3,
+    "username": "music_lover",
+    "nickname": "音乐爱好者",
+    "password": "$2a$08$bA8DVmpCRg9z4CsztvR2ReTCeSY.QxI0QtcPBXvMW7a0eStqc8yBi",
+    "email": "lover@example.com",
+    "role": "buyer",
+    "avatar": "🎧",
+    "balance": 15000,
+    "bio": "寻找优秀的原创音乐作品",
+    "createdAt": 1777066103542
+  }
+]
